@@ -1,7 +1,6 @@
 import java.util.Scanner;
-
-public class AddMatrix {
-
+public class AddMatrix 
+{
     public static void main(String[] args) {
         int i, j;
         if (args.length == 0) {
@@ -37,5 +36,10 @@ public class AddMatrix {
             }
             System.out.println();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "AddMatrix []";
     }
 }
