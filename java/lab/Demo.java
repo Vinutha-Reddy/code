@@ -1,3 +1,7 @@
+
+/*5. Design a super class called staff with details as staff id, name, phone number and salary. Extend this class by writing 3 sub classes namely
+teaching (domain,publications), technical (skills) and contract (period). Write a JAVA program to read and display the staff objects of all 3 
+categories*/
 import java.util.Scanner;
 
 class Staff {
@@ -78,5 +82,4 @@ public class Demo {
         System.out.println("SID\tName\tPhone No.\tSalary\tPeriod");
         c.display();
     }
-
 }
