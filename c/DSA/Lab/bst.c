@@ -73,16 +73,16 @@ int main()
     node *root = NULL;
     printf("Enter the number of elements : ");
     scanf("%d", &n);
+    printf("Enter the elements : ");
     for (i = 0; i < n; i++)
     {
-        printf("Enter the element : ");
         scanf("%d", &key);
         root = insert(root, key);
     }
     while (1)
     {
-        printf("Enter your choice : ");
-        printf("\n1. Inorder\n2. Preorder\n3. Postorder\n4. Search\n5. Exit");
+        printf("\nEnter your choice : ");
+        printf("\n1. Inorder\n2. Preorder\n3. Postorder\n4. Search\n5. Exit\n");
         scanf("%d", &choice);
         switch (choice)
         {
@@ -106,7 +106,7 @@ int main()
         case 5:
             exit(0);
         default:
-            printf("Invalid choice");
+            printf("Invalid choice\n");
             break;
         }
     }
