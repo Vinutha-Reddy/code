@@ -1,25 +1,28 @@
-/*9. Develop a Program in C for the following operationson Singly Circular Linked List (SCLL) 
-with header nodes 
+/*9. Develop a Program in C for the following operationson Singly Circular Linked List (SCLL)
+with header nodes
 a. Represent and Evaluate a Polynomial P(x,y,z) = 6x2y2z-4yz5+3x3yz+2xy5z-2xyz3
-b. Find the sum of two polynomials POLY1(x,y,z) and POLY2(x,y,z) and store the 
+b. Find the sum of two polynomials POLY1(x,y,z) and POLY2(x,y,z) and store the
 result in POLYSUM(x,y,z)
-Support the program with appropriate functions for each of the above operations 
+Support the program with appropriate functions for each of the above operations
 */
 #include <stdio.h>
 #include <stdlib.h>
-struct polynomial {
+struct polynomial
+{
   int coeff, expo1, expo2, expo3;
-  struct polynomial* next;
+  struct polynomial *next;
   int flag;
 };
 typedef struct polynomial node;
-node* getnode() {
-  node* newnode = (node*)malloc(sizeof(node));
+node *getnode()
+{
+  node *newnode = (node *)malloc(sizeof(node));
   newnode->next = NULL;
   newnode->flag = 0;
   return newnode;
 }
-node* insertend(node* head, int c, int x, int y, int z) {
+node *insertend(node *head, int c, int x, int y, int z)
+{
   node *newnode, *temp = head->next;
   newnode = getnode();
   newnode->coeff = c;
@@ -32,20 +35,24 @@ node* insertend(node* head, int c, int x, int y, int z) {
   newnode->next = head;
   return head;
 }
-node* readpoly(node* head) {
+node *readpoly(node *head)
+{
   int i, n, c, x, y, z;
   printf("enter the no of terms\n");
   scanf("%d", &n);
-  for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++)
+  {
     printf("enter the coeff expo1 expo2 expo3\n");
     scanf("%d%d%d%d", &c, &x, &y, &z);
     head = insertend(head, c, x, y, z);
   }
   return head;
 }
-void printpoly(node* head) {
-  node* temp = head->next;
-  while (temp->next != head) {
+void printpoly(node *head)
+{
+  node *temp = head->next;
+  while (temp->next != head)
+  {
     printf("%dx^%dy^%dz^%d + ", temp->coeff, temp->expo1, temp->expo2,
            temp->expo3);
     temp = temp->next;
@@ -53,27 +60,33 @@ void printpoly(node* head) {
   printf("%dx^%dy^%dz^%d\n", temp->coeff, temp->expo1, temp->expo2,
          temp->expo3);
 }
-void evaluate(node* head) {
-  node* temp = head->next;
+void evaluate(node *head)
+{
+  node *temp = head->next;
   int sum = 0, x, y, z;
   printf("enter the value of x y and z");
   scanf("%d%d%d", &x, &y, &z);
-  while (temp != head) {
+  while (temp != head)
+  {
     sum = sum + temp->coeff * pow(x, temp->expo1) * pow(y, temp->expo2) *
                     pow(z, temp->expo3);
     temp = temp->next;
   }
   printf("the evlauated result of a polynomial is %d\n", sum);
 }
-node* addpoly(node* h1, node* h2, node* h3) {
+node *addpoly(node *h1, node *h2, node *h3)
+{
   node *p1, *p2;
   int c;
   p1 = h1->next;
-  while (p1 != h1) {
+  while (p1 != h1)
+  {
     p2 = h2->next;
-    while (p2 != h2) {
+    while (p2 != h2)
+    {
       if (p1->expo1 == p2->expo1 && p1->expo2 == p2->expo2 &&
-          p1->expo3 == p2->expo3) {
+          p1->expo3 == p2->expo3)
+      {
         c = p1->coeff + p2->coeff;
         h3 = insertend(h3, c, p1->expo1, p1->expo2, p1->expo3);
         p1->flag = 1;
@@ -86,15 +99,19 @@ node* addpoly(node* h1, node* h2, node* h3) {
   // code for adding remaining terms
   p1 = h1->next;
   p2 = h2->next;
-  while (p1 != h1) {
-    if (p1->flag == 0) {
+  while (p1 != h1)
+  {
+    if (p1->flag == 0)
+    {
       h3 = insertend(h3, p1->coeff, p1->expo1, p1->expo2, p1->expo3);
     }
     p1 = p1->next;
   }
 
-  while (p2 != h2) {
-    if (p2->flag == 0) {
+  while (p2 != h2)
+  {
+    if (p2->flag == 0)
+    {
       h3 = insertend(h3, p2->coeff, p2->expo1, p2->expo2, p2->expo3);
     }
     p2 = p2->next;
@@ -102,12 +119,13 @@ node* addpoly(node* h1, node* h2, node* h3) {
 
   return h3;
 }
-int main() {
-  node* h1 = (node*)malloc(sizeof(node));
+int main()
+{
+  node *h1 = (node *)malloc(sizeof(node));
   h1->next = h1;
-  node* h2 = (node*)malloc(sizeof(node));
+  node *h2 = (node *)malloc(sizeof(node));
   h2->next = h2;
-  node* h3 = (node*)malloc(sizeof(node));
+  node *h3 = (node *)malloc(sizeof(node));
   h3->next = h3;
   printf("read 1st polynomial\n");
   h1 = readpoly(h1);

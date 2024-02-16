@@ -1,10 +1,12 @@
 /*5. Develop a Program in C for the following Stack Applications
-b. Solving Tower of Hanoi problem with n disks 
+b. Solving Tower of Hanoi problem with n disks
 */
 #include <stdio.h>
 
-void tower(int n, char source, char temp, char dest) {
-  if (n == 1) {
+void tower(int n, char source, char temp, char dest)
+{
+  if (n == 1)
+  {
     printf("Move disk 1 from %c to %c\n", source, dest);
     return;
   }
@@ -14,15 +16,17 @@ void tower(int n, char source, char temp, char dest) {
   tower(n - 1, temp, source, dest);
 }
 
-int main() {
+int main()
+{
   int n;
 
   printf("Enter the number of disks: ");
   scanf("%d", &n);
 
-  if (n < 1) {
+  if (n < 1)
+  {
     printf("Number of disks should be at least 1.\n");
-    return 1;  // Error exit code
+    return 1; // Error exit code
   }
 
   printf("Tower of Hanoi solution for %d disks:\n", n);
