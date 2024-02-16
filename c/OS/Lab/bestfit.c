@@ -1,3 +1,6 @@
+/*6. Develop a C program to simulate the following contiguous memory allocation Techniques: 
+ b) Best fit 
+*/
 #include <stdio.h>
 #define max 25
 void main()

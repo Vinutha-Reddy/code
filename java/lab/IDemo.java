@@ -1,3 +1,6 @@
+/*9. Develop a JAVA program to raise a custom exception (user defined exception) for DivisionByZero using 
+try, catch, throw and finally.
+*/
 import java.util.Scanner;
 class IException extends Exception{
     IException(String msg){

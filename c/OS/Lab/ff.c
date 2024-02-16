@@ -1,3 +1,6 @@
+/*6. Develop a C program to simulate the following contiguous memory allocation Techniques: 
+ c) First fit.
+*/
 #include <stdio.h>
 void main()
 {

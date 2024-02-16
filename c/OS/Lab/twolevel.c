@@ -1,3 +1,6 @@
+/*8. Simulate following File Organization Techniques 
+b) Two level directory
+*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

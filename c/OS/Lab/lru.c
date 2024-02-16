@@ -1,3 +1,6 @@
+/*7. Develop a C program to simulate page replacement algorithms: 
+b) LRU
+*/
 #include <stdio.h>
 int main()
 {

@@ -1,3 +1,6 @@
+/*7. Develop a C program to simulate page replacement algorithms: 
+a) FIFO
+*/
 #include <stdio.h>
 int main()
 {

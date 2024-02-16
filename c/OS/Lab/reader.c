@@ -1,3 +1,6 @@
+/*4. Develop a C program which demonstrates interprocess communication between a reader 
+process and a writer process. Use mkfifo, open, read, write and close APIs in your program. 
+*/
 #include<fcntl.h>
 #include<sys/stat.h>
 #include<sys/types.h>
