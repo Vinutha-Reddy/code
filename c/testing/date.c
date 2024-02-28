@@ -5,9 +5,9 @@
 
 #define NUM_THREADS 128
 
-char *randstring(size_t len) {
+char* randstring(size_t len) {
   static char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  char *random = NULL;
+  char* random = NULL;
 
   if (len) {
     random = malloc(sizeof(char) * (len + 1));
@@ -25,8 +25,8 @@ char *randstring(size_t len) {
   return random;
 }
 
-void *thread_function(void *thread_arg) {
-  int *thread_id = (int *)thread_arg;
+void* thread_function(void* thread_arg) {
+  int* thread_id = (int*)thread_arg;
   int c = 1;
 
   while (1) {
@@ -68,7 +68,7 @@ int main() {
 
   for (int i = 0; i < NUM_THREADS; i++) {
     thread_ids[i] = i;
-    pthread_create(&threads[i], NULL, thread_function, (void *)&thread_ids[i]);
+    pthread_create(&threads[i], NULL, thread_function, (void*)&thread_ids[i]);
   }
 
   for (int i = 0; i < NUM_THREADS; i++) {

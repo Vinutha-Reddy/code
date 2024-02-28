@@ -1,8 +1,7 @@
 /*5. Develop a C program to simulate Bankers Algorithm for DeadLock Avoidance.
  */
 #include <stdio.h>
-int main()
-{
+int main() {
   int i, j, k, n, r;
   n = 5;
   r = 4;
@@ -15,29 +14,22 @@ int main()
   for (k = 0; k < n; k++)
     f[k] = 0;
   int need[n][r];
-  for (i = 0; i < n; i++)
-  {
+  for (i = 0; i < n; i++) {
     for (j = 0; j < r; j++)
       need[i][j] = max[i][j] - alloc[i][j];
   }
   int y = 0;
-  for (k = 0; k < 5; k++)
-  {
-    for (i = 0; i < n; i++)
-    {
-      if (f[i] == 0)
-      {
+  for (k = 0; k < 5; k++) {
+    for (i = 0; i < n; i++) {
+      if (f[i] == 0) {
         int flag = 0;
-        for (j = 0; j < r; j++)
-        {
-          if (need[i][j] > avail[j])
-          {
+        for (j = 0; j < r; j++) {
+          if (need[i][j] > avail[j]) {
             flag = 1;
             break;
           }
         }
-        if (flag == 0)
-        {
+        if (flag == 0) {
           ans[ind++] = i;
           for (y = 0; y < n; y++)
             avail[y] += alloc[i][y];
