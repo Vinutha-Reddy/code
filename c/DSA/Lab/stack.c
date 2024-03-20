@@ -26,7 +26,7 @@ void display() {
   if (top == -1)
     printf("Stack is empty");
   else {
-    printf("Stack elemets are ");
+    printf("Stack elements are ");
     for (i = top; i >= 0; i--) {
       printf("%d\t", stack[i]);
     }
@@ -50,7 +50,7 @@ void palindrome() {
       top = -1;
       return;
     }
-    ncopy / 10;
+    ncopy = ncopy / 10;
   }
   printf("It is a palindrome");
 }
