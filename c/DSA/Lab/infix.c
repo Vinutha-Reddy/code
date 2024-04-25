@@ -46,7 +46,7 @@ void convertin(char infix[], char postfix[]) {
         push(symbol);
         break;
       case ')':
-        while (STACK[top] != 'c')
+        while (STACK[top] != '(')
           postfix[j++] = pop();
         pop();
         break;
@@ -57,18 +57,17 @@ void convertin(char infix[], char postfix[]) {
       case '*':
       case '+':
       case '-':
-        while (prec(symbol) <= prec(STACK[top])) {
+        while (prec(symbol) <= prec(STACK[top]))
           postfix[j++] = pop();
-          push(symbol);
-        }
+        push(symbol);
         break;
       default:
         postfix[j++] = symbol;
-        while (STACK[top] != '#')
-          postfix[j++] = pop();
-        postfix[j++] = '\0';
     }
   }
+  while (STACK[top] != '#')
+    postfix[j++] = pop();
+  postfix[j++] = '\0';
 }
 void main() {
   char infix[30], postfix[30];
