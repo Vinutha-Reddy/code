@@ -68,9 +68,6 @@ int evaluatePostfix(char postfix[]) {
         case '^':
           push(pow(op1, op2));
           break;
-        case '$':
-          push(op1$op2);
-          break;
         default:
           printf("Error: Invalid operator\n");
           exit(1);
