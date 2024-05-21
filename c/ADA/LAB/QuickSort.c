@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 int i,j,m,temp,count=0;
 int partition(int a[],int l,int n){
         int p=a[l];
@@ -32,7 +33,7 @@ void Quick_Sort(int a[],int l,int n){
     }
 }
 int main(){
-    int a[10000];
+    int a[1000];
     printf("\nEnter the size of the array : ");
     scanf("%d",&m);
     printf("\nThe array elements are : ");
