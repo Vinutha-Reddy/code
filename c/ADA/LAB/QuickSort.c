@@ -6,12 +6,12 @@ int partition(int a[],int l,int n){
         j=n+1;
         do{
             do{
-                count++;
                 i++;
+                count++;
             }while(i<n&&a[i]<p);
             do{
-                count++;
                 j--;
+                count++;
             }while(j>l&&a[j]>p);
             if(i<j){
                 temp=a[i];
