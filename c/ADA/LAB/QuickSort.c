@@ -2,24 +2,24 @@
 #include<stdlib.h>
 int i,j,m,temp,count=0;
 int partition(int a[],int l,int n){
-        int p=a[l];
-        i=l;
-        j=n+1;
+    int p=a[l];
+    i=l;
+    j=n+1;
+    do{
         do{
-            do{
-                i++;
-                count++;
-            }while(i<n&&a[i]<p);
-            do{
-                j--;
-                count++;
-            }while(j>l&&a[j]>p);
-            if(i<j){
-                temp=a[i];
-                a[i]=a[j];
-                a[j]=temp;
-            }
-        }while(i<j);
+            i++;
+            count++;
+        }while(i<n&&a[i]<p);
+        do{
+            j--;
+            count++;
+        }while(j>l&&a[j]>p);
+        if(i<j){
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+        }
+    }while(i<j);
     temp=a[l];
     a[l]=a[j];
     a[j]=temp;
