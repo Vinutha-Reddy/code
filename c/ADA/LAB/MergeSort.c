@@ -7,7 +7,6 @@ void MergeSort(int a[],float n){
     f=floor(n/2);
     d=ceil(n/2);
     if(n>1){
-        count++;
         for(i=0;i<f;i++)
             b[i]=a[i];
         for(i=f;i<n;i++)
