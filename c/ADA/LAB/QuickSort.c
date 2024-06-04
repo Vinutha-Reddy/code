@@ -33,7 +33,7 @@ void Quick_Sort(int a[],int l,int n){
     }
 }
 int main(){
-    int a[1000];
+    int a[10000];
     printf("\nEnter the size of the array : ");
     scanf("%d",&m);
     printf("\nThe array elements are : ");
