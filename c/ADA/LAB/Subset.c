@@ -1,3 +1,5 @@
+/*8. Design and implement C/C++ Program to find a subset of a given set S = {sl , s2,.....,sn} of n 
+positive integers whose sum is equal to a given positive integer d.*/
 #include <stdio.h>
 int x[10], w[10], count, d, i;
 void sum_of_subsets(int s, int k, int rem) {

@@ -1,3 +1,5 @@
+/*3. b. Design and implement C/C++ Program to find the transitive closure using Warshal's 
+algorithm. */
 #include<stdio.h>
 int i,j,k;
 void Warshal(int a[][10],int n){

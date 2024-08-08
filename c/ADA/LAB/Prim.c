@@ -1,3 +1,5 @@
+/*2. Design and implement C/C++ Program to find Minimum Cost Spanning Tree of a given connected 
+undirected graph using Prim's algorithm. */
 #include <stdio.h>
 int cost[10][10], n;
 void prim() {

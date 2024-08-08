@@ -1,3 +1,5 @@
+/*5. Design and implement C/C++ Program to obtain the Topological ordering of vertices in a given 
+digraph. */
 #include<stdio.h>
 int cost[10][10],n,indegree[10],i,j,k,count;
 void Calculate_indegree(){

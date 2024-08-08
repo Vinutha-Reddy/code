@@ -1,3 +1,5 @@
+/*6. Design and implement C/C++ Program to solve 0/1 Knapsack problem using Dynamic 
+Programming method.*/
 #include <stdio.h>
 #include <stdlib.h>
 void DpKnapsack(int n, int m, int p[], int w[]) {

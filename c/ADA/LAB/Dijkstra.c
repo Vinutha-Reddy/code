@@ -1,3 +1,5 @@
+/*4. Design and implement C/C++ Program to find shortest paths from a given vertex in a weighted 
+connected graph to other vertices using Dijkstra's algorithm. */
 #include<stdio.h>
 int i,j,v,n,cost[10][10],dist[10];
 int minm(int m,int n){

@@ -1,3 +1,5 @@
+/*7. Design and implement C/C++ Program to solve discrete Knapsack and continuous Knapsack 
+problems using greedy approximation method. */
 #include <stdio.h>
 void Greedy(int n, int m, float p[], float w[]) {
   float profit = 0, max;
