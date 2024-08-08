@@ -1,5 +1,5 @@
-/*2. Design and implement C/C++ Program to find Minimum Cost Spanning Tree of a given connected 
-undirected graph using Prim's algorithm. */
+/*2. Design and implement C/C++ Program to find Minimum Cost Spanning Tree of a
+given connected undirected graph using Prim's algorithm. */
 #include <stdio.h>
 int cost[10][10], n;
 void prim() {
@@ -10,30 +10,33 @@ void prim() {
   while (ne < n - 1) {
     min = 999;
     for (int i = 0; i < n; i++) {
-      if (vt[i] == 1)
-        for (int j = 0; j < n; j++)
+      if (vt[i] == 1) {
+        for (int j = 0; j < n; j++) {
           if (cost[i][j] < min && vt[j] == 0) {
             min = cost[i][j];
             a = i;
             b = j;
           }
+        }
+      }
     }
 
-    printf("Edge from vertex %d to vertex %d and the cost %d\n", a, b, min);
+    printf("\nEdge from vertex %d to vertex %d and the cost %d", a, b, min);
     vt[b] = 1;
     ne++;
     mincost += min;
     cost[a][b] = cost[b][a] = 999;
   }
-  printf("minimum spanning tree cost is %d", mincost);
+  printf("\nMinimum spanning tree cost is %d", mincost);
 }
 void main() {
   printf("Enter the no. of vertices: ");
   scanf("%d", &n);
   printf("Enter the cost matrix\n");
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++)
       scanf("%d", &cost[i][j]);
+  }
   prim();
 }
 
