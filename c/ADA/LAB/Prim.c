@@ -1,7 +1,7 @@
 /*2. Design and implement C/C++ Program to find Minimum Cost Spanning Tree of a
 given connected undirected graph using Prim's algorithm. */
 #include <stdio.h>
-int cost[10][10], n;
+int cost[10][10], n,i,j;
 void prim() {
   int vt[10] = {0};
   int a = 0, b = 0, min, mincost = 0, ne = 0;
@@ -9,9 +9,9 @@ void prim() {
   vt[0] = 1;
   while (ne < n - 1) {
     min = 999;
-    for (int i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
       if (vt[i] == 1) {
-        for (int j = 0; j < n; j++) {
+        for (j = 0; j < n; j++) {
           if (cost[i][j] < min && vt[j] == 0) {
             min = cost[i][j];
             a = i;
@@ -33,8 +33,8 @@ void main() {
   printf("Enter the no. of vertices: ");
   scanf("%d", &n);
   printf("Enter the cost matrix\n");
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++)
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++)
       scanf("%d", &cost[i][j]);
   }
   prim();
