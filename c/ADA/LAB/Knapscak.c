@@ -41,3 +41,17 @@ int main() {
     scanf("%f", &w[i]);
   Greedy(n, m, p, w);
 }
+
+/*OUTPUT:
+Enter the number of items : 5
+Enter the capacity of knapsack : 100
+Enter the profit :
+20 30 66 40 60
+Enter the weight :   
+10 20 30 40 50
+Item 3 selected with fraction 1
+Item 1 selected with fraction 1
+Item 2 selected with fraction 1
+Discrete knapsack profit=116.000000
+Continuous knapsack profit by including 5 item with fraction 0.800000=164.000000
+*/

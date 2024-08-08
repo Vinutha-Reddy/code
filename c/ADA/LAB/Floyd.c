@@ -29,3 +29,17 @@ int main(){
         printf("\n");
     }
 }
+
+/*OUTPUT:
+Enter the number of vertices : 4
+Enter the cost matrix :    
+999 8 4 999
+999 999 1 999
+4 999 999 999
+999 2 9 999
+All pair shortest path : 
+8 8 4 999
+5 13 1 999
+4 12 8 999
+7 2 3 999
+*/

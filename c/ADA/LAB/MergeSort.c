@@ -53,3 +53,10 @@ int main(){
         printf("%d\t",a[i]);
     printf("\nNumber of times the basic operation executed : %d",count);
 }
+
+/*OUTPUT:
+Enter the size of the array : 5
+The array elements are : 41     18467   6334    26500   19169
+The sorted elements are : 41    6334    18467   19169   26500
+Number of times the basic operation executed : 6
+*/

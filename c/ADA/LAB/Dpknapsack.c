@@ -47,3 +47,19 @@ int main() {
     scanf("%d", &w[i]);
   DpKnapsack(n, m, p, w);
 }
+
+/*OUTPUT:
+Enter the number of items : 4 
+Enter the capacity of knapscak : 5
+Enter the profit :
+12 10 20 15
+Enter the weight :
+2 1 3 2
+0       0       0       0       0       0
+0       0       12      12      12      12
+0       10      12      22      22      22
+0       10      12      22      30      32
+0       10      15      25      30      37
+Optimal profit : 37
+Selected items are :4 2 1
+*/

@@ -33,3 +33,12 @@ int main() {
   else
     sum_of_subsets(0, 0, sum);
 }
+
+/*OUTPUT:
+Enter the number of elements : 4
+Enter the elements in increasing order :
+1 2 3 4
+Enter the sum : 5
+Subset : 1  1 4
+Subset : 2  2 3
+*/

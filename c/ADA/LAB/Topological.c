@@ -38,3 +38,14 @@ int main(){
     }
     Source_removal();
 }
+
+/*OUTPUT:
+Enter the value of n : 5
+Enter value of cost matrix :
+0 1 1 0 0
+0 0 0 1 1
+0 0 0 1 0
+0 0 0 0 1 
+0 0 0 0 0
+Topological ordereing is : 0 1 2 3 4
+*/

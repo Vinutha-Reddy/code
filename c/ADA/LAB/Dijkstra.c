@@ -41,5 +41,22 @@ int main(){
     Dijkstra(source);
     printf("\n The shortest distance is ...");
     for(i=0;i<n;i++)
-        printf("Cost from %d to %d is %d \n",source,i,dist[i]);
+        printf("\nCost from %d to %d is %d \n",source,i,dist[i]);
 }
+
+/*OUTPUT:
+Enter the number of vertices : 5
+Enter the cost matrix :
+0 3 1 999 999 
+3 0 7 5 1
+1 7 0 2 999
+999 5 2 0 7
+999 1 999 7 0
+Enter the source vertex : 0
+The shortest distance is ...
+Cost from 0 to 0 is 0      
+Cost from 0 to 1 is 3
+Cost from 0 to 2 is 1
+Cost from 0 to 3 is 3
+Cost from 0 to 4 is 4
+*/

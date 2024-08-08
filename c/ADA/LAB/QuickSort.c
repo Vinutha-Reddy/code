@@ -47,7 +47,14 @@ int main(){
     }
     Quick_Sort(a,0,m);
     printf("\nThe sorted elements are : ");
-    for(i=0;i<m;i++)
+    for(i=1;i<=m;i++)
         printf("%d\t",a[i]);
     printf("\nNumber of times basic operations executed :%d",count);
 }
+
+/*OUTPUT:
+Enter the size of the array : 5
+The array elements are : 41     18467   6334    26500   19169
+The sorted elements are : 41    6334    18467   19169   26500
+Number of times basic operations executed :18
+*/

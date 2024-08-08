@@ -40,3 +40,18 @@ void main() {
   scanf("%d", &n);
   printf("\n The number of possibilities are %d", NQueen(n));
 }
+
+/*OUTPUT:
+Enter size of chessboard : 4
+Solution : 1    
+X Q X X
+X X X Q
+Q X X X
+X X Q X
+Solution : 2    
+X X Q X
+Q X X X
+X X X Q
+X Q X X
+The number of possibilities are 2
+*/

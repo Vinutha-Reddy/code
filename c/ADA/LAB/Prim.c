@@ -36,3 +36,18 @@ void main() {
       scanf("%d", &cost[i][j]);
   prim();
 }
+
+/*OUTPUT:
+Enter the no. of vertices: 5
+Enter the cost matrix
+999 5 999 6 999
+5 999 1 3 999
+999 1 999 4 6
+6 3 4 999 2
+999 999 6 2 999
+Edge from vertex 0 to vertex 1 and the cost 5
+Edge from vertex 1 to vertex 2 and the cost 1
+Edge from vertex 1 to vertex 3 and the cost 3
+Edge from vertex 3 to vertex 4 and the cost 2
+minimum spanning tree cost is 11
+*/
