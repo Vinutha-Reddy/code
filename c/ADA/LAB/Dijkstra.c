@@ -21,10 +21,10 @@ void Dijkstra(int source){
             }
         }
         s[w]=1;
-    for(v=0;v<n;v++){
-        if(s[v]==0&&cost[w][v]!=999)
-            dist[v]=minm(dist[v],dist[w]+cost[w][v]);
-    }
+        for(v=0;v<n;v++){
+            if(s[v]==0&&cost[w][v]!=999)
+                dist[v]=minm(dist[v],dist[w]+cost[w][v]);
+        }
     }
 }
 int main(){
