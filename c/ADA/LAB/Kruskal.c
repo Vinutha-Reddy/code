@@ -1,7 +1,7 @@
-/*1. Design and implement C/C++ Program to find Minimum Cost Spanning Tree of a given connected 
-undirected graph using Kruskal's algorithm. */
+/*1. Design and implement C/C++ Program to find Minimum Cost Spanning Tree of a
+given connected undirected graph using Kruskal's algorithm. */
 #include <stdio.h>
-int cost[10][10], n;
+int cost[10][10], n, i, j;
 
 void kruskal() {
   int par[n];
@@ -11,16 +11,16 @@ void kruskal() {
 
   printf("the minimum spanning tree edges are...");
   while (ne < n - 1) {
-
     min = 999;
-    for (int i = 0; i < n; i++)
-      for (int j = 0; j < n; j++)
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n; j++) {
         if (cost[i][j] < min) {
           min = cost[i][j];
           a = u = i;
           b = v = j;
         }
-
+      }
+    }
     while (par[u] != -1)
       u = par[u];
     while (par[v] != -1)
@@ -41,8 +41,8 @@ void main() {
   printf("Enter the no. of vertices:");
   scanf("%d", &n);
   printf("Enter the cost matrix\n");
-  for (int i = 0; i < n; i++)
-    for (int j = 0; j < n; j++)
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
       scanf("%d", &cost[i][j]);
   kruskal();
 }
