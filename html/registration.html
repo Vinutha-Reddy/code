@@ -1,67 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Registration Form </title>
-        <style>
-            body{
-                background-color: #c5ebf7;
-            }
-            input[type=text], input[type=password], input[type=email], input[type=tel], input[type=date] {
-                width: 100%;
-                padding: 12px 20px;
-                margin: 8px 0;
-                border: 1px solid #000000;
-                box-sizing: border-box;
-            }
-            button {
-                background-color: #09ca7d;
-                color: rgb(0, 0, 0);
-                padding: 14px 20px;
-                margin: 8px 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <form action="action_page.php" method="post">
-            <h3> REGISTRATION FORM </h3>
-            <p> Please fill in this form to create an account. </p>
-            <hr>
-            <label for="name"><b> NAME </b></label>
-            <input type="text" placeholder="Enter Name" name="name" id="name" required>
-            <br>
-            <label for="email"><b> EMAIL </b></label>
-            <input type="email" placeholder="Enter Email" name="email" id="email" required>
-            <br>
-            <label for="psw"><b> PASSWORD </b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-            <br>
-            <label for="phone-number"><b> PHONE NUMBER </b></label>
-            <input type="tel" placeholder="Enter Phone Number" name="phone-number" id="phone-number" required>
-            <br>
-            <label for="gender"><b> GENDER </b></label>
-            <br>
-            <input type="radio" name="gender" id="gender" value="male"> Male
-            <input type="radio" name="gender" id="gender" value="female"> Female
-            <br>
-            <label for="date-of-birth"><b> DATE OF BIRTH </b></label>
-            <input type="date" name="date-of-birth" id="date-of-birth" required>
-            <br>
-            <label for="address"><b> ADDRESS </b></label>
-            <br>
-            <textarea name="address" id="address" cols="30" rows="10"></textarea>
-            <br>
-            <label for="department"><b> DEPARTMENT </b></label>
-            <br>
-            <input type="checkbox" name="department" id="department" value="CSE"> CSE 
-            <input type="checkbox" name="department" id="department" value="CSE"> ECE
-            <input type="checkbox" name="department" id="department" value="CSE"> EEE
-            <input type="checkbox" name="department" id="department" value="CSE"> MECH
-            <input type="checkbox" name="department" id="department" value="CSE"> CIVIL
-            <input type="checkbox" name="department" id="department" value="CSE"> ISE
-            <input type="checkbox" name="department" id="department" value="CSE"> AIML
-            <br>
-            <button type="submit" class="registerbtn"><b> REGISTER </b></button>
-        </form>
-    </body>
+
+<head>
+    <title> Registration Form </title>
+    <style>
+        body {
+            background-color: #c5ebf7;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=tel],
+        input[type=date] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #09ca7d;
+            color: rgb(0, 0, 0);
+            padding: 14px 20px;
+            margin: 8px 0;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            text-align: center;
+            padding: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="action_page.php" method="post">
+        <h3> REGISTRATION FORM </h3>
+        <p> Please fill details in the form . </p>
+        <hr>
+        <table border="3" cellspacing="5">
+            <tr>
+                <td> <label for="name"><b> NAME </b></label> </td>
+                <td> <input type="text" placeholder="Enter Name" name="name" id="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email"><b> EMAIL </b></label> </td>
+                <td><input type="email" placeholder="Enter Email" name="email" id="email" required> </td>
+            </tr>
+            <tr>
+                <td><label for="psw"><b> PASSWORD </b></label></td>
+                <td><input type="password" placeholder="Enter Password" name="psw" id="psw" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone-number"><b> PHONE NUMBER </b></label></td>
+                <td><input type="tel" placeholder="Enter Phone Number" name="phone-number" id="phone-number" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="gender"><b> GENDER </b></label></td>
+                <td><input type="radio" name="gender" id="gender" value="male"> Male
+                    <input type="radio" name="gender" id="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td><label for="date-of-birth"><b> DATE OF BIRTH </b></label></td>
+                <td><input type="date" name="date-of-birth" id="date-of-birth" required></td>
+            </tr>
+            <tr>
+                <td><label for="address"><b> ADDRESS </b></label></td>
+                <td><textarea name="address" id="address" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="department"><b> DEPARTMENT </b></label></td>
+                <td><input type="radio" name="department" id="department" value="CSE"> CSE
+                    <input type="radio" name="department" id="department" value="ECE"> ECE
+                    <input type="radio" name="department" id="department" value="EEE"> EEE
+                    <input type="radio" name="department" id="department" value="MECH"> MECH
+                    <input type="radio" name="department" id="department" value="CIVIL"> CIVIL
+                    <input type="radio" name="department" id="department" value="ISE"> ISE
+                    <input type="radio" name="department" id="department" value="AIML"> AIML
+                </td>
+            </tr>
+            <tr>
+                <td><label for="sports"><b> SPORTS </b></label></td>
+                <td><input type="checkbox" name="sports" id="sports" value="CARROM"> CARROM
+                    <input type="checkbox" name="sports" id="sports" value="CHESS"> CHESS
+                    <input type="checkbox" name="sports" id="sports" value="BADMINTON"> BADMINTON
+                    <input type="checkbox" name="sports" id="sports" value="TABLE TENNIS"> TABLE TENNIS
+                    <input type="checkbox" name="sports" id="sports" value="LUDO"> LUDO
+                </td>
+            </tr>
+        </table>
+        <button type="submit"><b> REGISTER </b></button>
+    </form>
+</body>
+
 </html>
