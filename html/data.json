@@ -1,1 +1,14 @@
-{"employees":[{"name":"John","age":30,"salary":20000},{"name":"Mike","age":28,"salary":18000}]}
+{
+    "employees": [
+        {
+            "name": "John",
+            "age": 30,
+            "salary": 20000
+        },
+        {
+            "name": "Mike",
+            "age": 28,
+            "salary": 18000
+        }
+    ]
+}

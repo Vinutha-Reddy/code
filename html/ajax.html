@@ -1,15 +1,34 @@
+<!-- 10. Develop a JavaScript program with Ajax (with HTML/CSS) for: 
+a. Use ajax() method (without Jquery) to add the text content from the text file by sending ajax request. 
+b. Use ajax() method (with Jquery) to add the text content from the text file by sending ajax request. 
+c. Illustrate the use of getJSON() method in jQuery 
+d. Illustrate the use of parseJSON() method to display JSON values. -->
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>AJAX Demonstration</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h3 { color: navy; }
-        pre { background: #f4f4f4; padding: 10px; border: 1px solid #dddddd; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h3 {
+            color: navy;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #dddddd;
+        }
     </style>
     <!-- Load jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
 
     <h1>AJAX Demonstration</h1>
@@ -17,22 +36,30 @@
     <!-- a. AJAX without jQuery -->
     <h3>a. AJAX without jQuery</h3>
     <button onclick="loadTextFile()">Load Text (Without jQuery)</button>
-    <div id="output1"><pre>Text content will appear here...</pre></div>
+    <div id="output1">
+        <pre>Text content will appear here...</pre>
+    </div>
 
     <!-- b. AJAX with jQuery -->
     <h3>b. AJAX with jQuery</h3>
     <button id="loadText">Load Text (With jQuery)</button>
-    <div id="output2"><pre>Text content will appear here...</pre></div>
+    <div id="output2">
+        <pre>Text content will appear here...</pre>
+    </div>
 
     <!-- c. jQuery getJSON -->
     <h3>c. Using getJSON() Method</h3>
     <button id="loadJson">Load JSON (getJSON)</button>
-    <div id="output3"><pre>JSON content will appear here...</pre></div>
+    <div id="output3">
+        <pre>JSON content will appear here...</pre>
+    </div>
 
     <!-- d. JSON.parse() -->
     <h3>d. Using parseJSON() Method</h3>
     <button id="parseJson">Parse JSON</button>
-    <div id="output4"><pre>Parsed JSON values will appear here...</pre></div>
+    <div id="output4">
+        <pre>Parsed JSON values will appear here...</pre>
+    </div>
 
     <script>
         // a. AJAX without jQuery
@@ -82,4 +109,5 @@
         });
     </script>
 </body>
+
 </html>

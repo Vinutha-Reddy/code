@@ -1,3 +1,6 @@
+<!-- 8. b. Develop a PHP program (with HTML/CSS) to sort the student records which are stored in the 
+database using selection sort. -->
+
 <?php
 // Database connection details
 $servername = "localhost";
@@ -14,10 +17,11 @@ if ($conn->connect_error) {
 }
 
 // Function to implement Selection Sort
-function selectionSort(&$arr, $n) {
-    for ($i = 0; $i < $n-1; $i++) {
+function selectionSort(&$arr, $n)
+{
+    for ($i = 0; $i < $n - 1; $i++) {
         $minIndex = $i;
-        for ($j = $i+1; $j < $n; $j++) {
+        for ($j = $i + 1; $j < $n; $j++) {
             if ($arr[$j]['roll_no'] < $arr[$minIndex]['roll_no']) {
                 $minIndex = $j;
             }
@@ -35,7 +39,7 @@ $result = $conn->query($sql);
 
 // Store records in an array
 $students = array();
-while($row = $result->fetch_assoc()) {
+while ($row = $result->fetch_assoc()) {
     $students[] = $row;
 }
 
@@ -48,6 +52,7 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Sorted Student Records</title>
     <style>
@@ -56,7 +61,8 @@ $conn->close();
             width: 100%;
         }
 
-        th, td {
+        th,
+        td {
             text-align: left;
             padding: 8px;
             border: 1px solid #ddd;
@@ -72,6 +78,7 @@ $conn->close();
         }
     </style>
 </head>
+
 <body>
     <h2>Sorted Student Records</h2>
     <table>
@@ -89,4 +96,5 @@ $conn->close();
         <?php endforeach; ?>
     </table>
 </body>
+
 </html>
