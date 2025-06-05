@@ -26,7 +26,7 @@ def locally_weighted_regression(x, y, x_query, tau):
 # Sample training data
 # ---------------------------------------------
 x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-y = np.array([1, 2, 3, 4, 3.5, 5.5, 6, 6.5, 8, 8])
+y = np.array([1, 2, 3, 4, 3.5, 5, 6, 7, 6.5, 8])
 
 # Query points for prediction
 x_query = np.linspace(1, 10, 100)

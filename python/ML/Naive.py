@@ -43,6 +43,5 @@ for i in range(n_samples):
     ax = plt.subplot(1, n_samples, i + 1)
     ax.imshow(x_test[i].reshape(64, 64), cmap='gray')
     ax.set_title(f"Pred: {y_pred[i]}\nTrue: {y_test[i]}")
-    ax.axis('off')
 
 plt.show()

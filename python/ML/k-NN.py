@@ -67,3 +67,5 @@ for k in k_values:
     accuracy = accuracy_score(true_labels, predictions) * 100
     accuracies[k] = accuracy
     print(f"Accuracy for k = {k} : {accuracy:.2f}%")
+    unlabeled_df[f"Label_k {k}"] = predictions
+# ---------------------------------------------
