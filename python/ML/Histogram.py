@@ -13,7 +13,7 @@ import seaborn as sns
 # ---------------------------------------------
 # Load the dataset from uploaded CSV
 # ---------------------------------------------
-df = pd.read_csv(f"housing.csv")
+df = pd.read_csv(r"housing.csv")
 
 # ---------------------------------------------
 # Identify numeric columns

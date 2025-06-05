@@ -9,14 +9,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # ---------------------------------------------
-# Dataset Loading - California Housing
-# Uncomment below if loading from sklearn
-# from sklearn.datasets import fetch_california_housing
-# dataset = fetch_california_housing(as_frame=True)
-# df = pd.DataFrame(dataset.data)
-
 # If using CSV
-# df = pd.read_csv("housing.csv")  
+df = pd.read_csv(r"housing.csv")  
 
 # ---------------------------------------------
 # Feature and target selection

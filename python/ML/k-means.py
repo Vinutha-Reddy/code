@@ -1,22 +1,10 @@
 """LAB PROGRAM 10: Develop a program to implement k-means clustering using Wisconsin Breast Cancer data set and visualize 
 the clustering result."""
 # ---------------------------------------------
-# Upload the dataset (Colab-specific)
-# ---------------------------------------------
-from google.colab import files
-uploaded = files.upload()
-
-# ---------------------------------------------
-# Read the uploaded file into a DataFrame
-# ---------------------------------------------
-import pandas as pd
-import io
-df = pd.read_csv(io.BytesIO(uploaded['Wisconsin Breast Cancer dataset.csv']))
-
-# ---------------------------------------------
 # Import required libraries
 # ---------------------------------------------
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.cluster import KMeans
@@ -26,7 +14,7 @@ warnings.filterwarnings('ignore')
 # ---------------------------------------------
 # Load dataset and drop unnecessary columns
 # ---------------------------------------------
-data = pd.read_csv("Wisconsin Breast Cancer dataset.csv")
+data = pd.read_csv(r"Wisconsin Breast Cancer dataset.csv")
 df = data.drop(['id', 'Unnamed: 32'], axis=1)
 
 # ---------------------------------------------
