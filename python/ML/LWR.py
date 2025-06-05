@@ -1,5 +1,4 @@
-"""LAB PROGRAM 06: Implement the non-parametric Locally Weighted Regression algorithm in order to fit data points. Select 
-appropriate data set for your experiment and draw graphs."""
+#LAB PROGRAM 06: Implement the non-parametric Locally Weighted Regression algorithm in order to fit data points. Select appropriate data set for your experiment and draw graphs.
 # ---------------------------------------------
 # Import required libraries
 # ---------------------------------------------

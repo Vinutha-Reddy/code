@@ -1,5 +1,4 @@
-"""LAB PROGRAM 10: Develop a program to implement k-means clustering using Wisconsin Breast Cancer data set and visualize 
-the clustering result."""
+#LAB PROGRAM 10: Develop a program to implement k-means clustering using Wisconsin Breast Cancer data set and visualize the clustering result.
 # ---------------------------------------------
 # Import required libraries
 # ---------------------------------------------
