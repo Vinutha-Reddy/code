@@ -1,3 +1,5 @@
+"""LAB PROGRAM 03: Develop a program to implement Principal Component Analysis (PCA) for reducing the dimensionality of 
+the Iris dataset from 4 features to 2."""
 # ---------------------------------------------
 # Import necessary libraries
 # ---------------------------------------------

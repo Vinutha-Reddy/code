@@ -1,7 +1,7 @@
 """LAB PROGRAM 02: Develop a program to Compute the correlation matrix to understand the relationships between pairs of 
 features. Visualize the correlation matrix using a heatmap to know which variables have strong 
 positive/negative correlations. Create a pair plot to visualize pairwise relationships between features. Use 
-California Housing dataset.  """
+California Housing dataset."""
 
 # ---------------------------------------------
 # Import required libraries
@@ -9,12 +9,11 @@ California Housing dataset.  """
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import io
 
 # ---------------------------------------------
 # Load dataset from uploaded file
 # ---------------------------------------------
-df = pd.read_csv(io.BytesIO(uploaded['housing.csv']))
+df = pd.read_csv(f"housing.csv")
 
 # ---------------------------------------------
 # Keep only numeric columns for correlation analysis

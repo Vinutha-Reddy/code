@@ -1,3 +1,5 @@
+"""LAB PROGRAM 09: Develop a program to implement the Naive Bayesian classifier considering Olivetti Face Data set for training. 
+Compute the accuracy of the classifier, considering a few test data sets."""
 # ---------------------------------------------
 # Load Olivetti Faces dataset
 # ---------------------------------------------
