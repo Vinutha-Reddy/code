@@ -46,5 +46,5 @@ for i in nf:
     IQR = q3 - q1
     l_bound = q1 - 1.5 * IQR
     u_bound = q3 + 1.5 * IQR
-    outliers = df[(df[i] < l_bound) | (df[i] > u_bound)]
+    outliers = df[(df[i] >= l_bound) & (df[i] <= u_bound)]
     print(f"{i}", len(outliers))

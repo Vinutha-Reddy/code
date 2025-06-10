@@ -20,7 +20,7 @@ def find_s_algorithm(data):
     for i in range(len(target)):
         if str(target[i]).strip().lower() == "yes":
             hypothesis = attributes[i].copy()
-            break
+        break
 
     for i in range(len(target)):
         if str(target[i]).strip().lower() == "yes":

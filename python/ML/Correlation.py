@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # Load dataset from uploaded file
 # ---------------------------------------------
 df = pd.read_csv(r"housing.csv")
-
+df = df.select_dtypes(include=['number'])
 # ---------------------------------------------
 # Compute and visualize the correlation matrix using a heatmap
 # ---------------------------------------------
